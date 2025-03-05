@@ -17,8 +17,7 @@ public class CameraSystem : MonoBehaviour
         if (Input.GetMouseButton(0)) {
             mouse_rotation.x = (mouse_rotation.x + Input.GetAxis("Mouse X") * sens) % 360;
             mouse_rotation.y = Mathf.Clamp((mouse_rotation.y + Input.GetAxis("Mouse Y") * sens), -90.0f, 90.0f); ;
-            transform.localRotation = Quaternion.Euler(-mouse_rotation.y, mouse_rotation.x, 0);
-        } 
+            transform.rotation = Quaternion.Euler(-mouse_rotation.y, mouse_rotation.x, 0);
+        }
     }
-
 }
