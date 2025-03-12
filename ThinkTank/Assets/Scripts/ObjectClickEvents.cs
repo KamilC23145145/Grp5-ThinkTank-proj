@@ -10,20 +10,7 @@ public class ObjectClickEvents : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        // Create a ray from the camera to the object under the mouse cursor
-        Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
-        RaycastHit hit;
 
-        // Perform the raycast and check if it hits the object and it's not blocked
-        if (Physics.Raycast(ray, out hit))
-        {
-            // Check if the ray hit the object this script is attached to
-            if (hit.collider.gameObject == this.gameObject)
-            {
-                // You are over the object, and it isn't blocked by another object
-                //MouseOver();
-            }
-        }
     }
 
     private void OnMouseEnter()
