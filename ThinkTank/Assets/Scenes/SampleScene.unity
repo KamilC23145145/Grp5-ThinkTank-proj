@@ -216,6 +216,10 @@ MonoBehaviour:
       m_Calls: []
     m_ActionId: 0f50ee40-3313-4e96-ad84-2b8852761572
     m_ActionName: ActionMap1/ScrollMouse[/Mouse/scroll]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 8f25c002-7958-4d28-9d61-28df9fb94f6a
+    m_ActionName: ActionMap1/MouseClick[/Mouse/leftButton]
   m_NeverAutoSwitchControlSchemes: 0
   m_DefaultControlScheme: 
   m_DefaultActionMap: ActionMap1
@@ -233,6 +237,7 @@ GameObject:
   - component: {fileID: 201310003}
   - component: {fileID: 201310002}
   - component: {fileID: 201310001}
+  - component: {fileID: 201310004}
   m_Layer: 0
   m_Name: Cube (1)
   m_TagString: Untagged
@@ -240,21 +245,25 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &201310000
-Transform:
+--- !u!224 &201310000
+RectTransform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 201309999}
-  serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.18, y: 0, z: 0.45}
+  m_LocalPosition: {x: 0, y: 0, z: 0.45}
   m_LocalScale: {x: 0.26638, y: 0.26638, z: 0.26638}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 409892932}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0.18, y: 0}
+  m_SizeDelta: {x: 100, y: 100}
+  m_Pivot: {x: 0.5, y: 0.5}
 --- !u!65 &201310001
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -326,6 +335,18 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 201309999}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &201310004
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 201309999}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 624cf5f584a59294c86c636fbb3ba850, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &409892928
 GameObject:
   m_ObjectHideFlags: 0
@@ -338,7 +359,6 @@ GameObject:
   - component: {fileID: 409892931}
   - component: {fileID: 409892930}
   - component: {fileID: 409892929}
-  - component: {fileID: 409892933}
   m_Layer: 0
   m_Name: Cube
   m_TagString: Untagged
@@ -387,7 +407,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: bfa8af7cfa49d7c44afe4dc3d3ce4d2d, type: 2}
+  - {fileID: 2100000, guid: 723c0b34c3b45f94192777d60bb7f054, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -433,18 +453,6 @@ Transform:
   - {fileID: 201310000}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &409892933
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 409892928}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 624cf5f584a59294c86c636fbb3ba850, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &705507993
 GameObject:
   m_ObjectHideFlags: 0
@@ -625,7 +633,7 @@ Transform:
   m_GameObject: {fileID: 963194225}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 1, z: -10}
+  m_LocalPosition: {x: 0, y: 0, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []

@@ -15,20 +15,29 @@
                     "initialStateCheck": true
                 },
                 {
-                    "name": "ScrollMouse",
+                    "name": "MouseScroll",
                     "type": "Value",
                     "id": "0f50ee40-3313-4e96-ad84-2b8852761572",
-                    "expectedControlType": "Delta",
+                    "expectedControlType": "",
                     "processors": "",
                     "interactions": "",
                     "initialStateCheck": true
+                },
+                {
+                    "name": "MouseClick",
+                    "type": "Button",
+                    "id": "8f25c002-7958-4d28-9d61-28df9fb94f6a",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
                 }
             ],
             "bindings": [
                 {
                     "name": "",
                     "id": "7ef4325b-b880-4c10-bc03-8c0d2ed81934",
-                    "path": "<Mouse>/position",
+                    "path": "<Mouse>/delta",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
@@ -39,11 +48,22 @@
                 {
                     "name": "",
                     "id": "2c2ca23b-c66d-4211-b1e4-8f0620b0a5b0",
-                    "path": "<Mouse>/scroll",
+                    "path": "<Mouse>/scroll/y",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
-                    "action": "ScrollMouse",
+                    "action": "MouseScroll",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "ea2c9d1e-0707-4236-85ef-5b9f2bffd424",
+                    "path": "<Mouse>/leftButton",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "MouseClick",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }
