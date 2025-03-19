@@ -11,4 +11,10 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Abdulrehman Asim/Scenes/Help-Screen.unity
     guid: 4b0be1b9604bba8418e308513e18eb5e
+  - enabled: 1
+    path: Assets/Abdulrehman Asim/Scenes/SelectScreen.unity
+    guid: b192403fc7d686f42850a2480a250f9f
+  - enabled: 1
+    path: Assets/Abdulrehman Asim/Scenes/ModelScreen.unity
+    guid: cdcff9573ab526044a3f56156f3444db
   m_configObjects: {}

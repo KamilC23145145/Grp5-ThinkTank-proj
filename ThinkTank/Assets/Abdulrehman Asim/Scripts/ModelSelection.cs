@@ -24,9 +24,9 @@ public class ModelSelection : MonoBehaviour
         characters[selectedCharacter].SetActive(true);
     }
 
-    public void StartGame()
+    public void ViewModel()
     {
         PlayerPrefs.SetInt("selectedCharacter", selectedCharacter);
-        SceneManager.LoadScene(1, LoadSceneMode.Single);
+        SceneManager.LoadScene("ModelScreen", LoadSceneMode.Single);
     }
 }
