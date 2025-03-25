@@ -970,10 +970,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e14182b4dbedfa0439824739e1415bb1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  InputText: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur dictum
-    non nisl a blandit. Aliquam sit amet mollis urna, eu efficitur dui. Donec pretium
-    facilisis suscipit. Nullam massa mi, elementum nec consectetur nec, tempus ut
-    urna.
+  InputText: Ellipse shaped wings for strong but thin wings.
   rotation: 0
 --- !u!1 &1796345457
 GameObject:

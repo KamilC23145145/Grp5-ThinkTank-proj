@@ -27,6 +27,18 @@ public class ModelSelection : MonoBehaviour
     public void ViewModel()
     {
         PlayerPrefs.SetInt("selectedCharacter", selectedCharacter);
-        SceneManager.LoadScene("ModelScreen", LoadSceneMode.Single);
+
+        if (selectedCharacter == 0)
+        {
+            SceneManager.LoadScene("SampleScene");
+        }
+        else if (selectedCharacter == 1)
+        {
+            SceneManager.LoadScene("CraneScene");
+        }
+        else if (selectedCharacter == 2)
+        {
+            SceneManager.LoadScene("BikeScene");
+        }
     }
 }
