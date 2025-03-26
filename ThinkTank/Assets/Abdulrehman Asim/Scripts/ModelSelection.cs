@@ -34,11 +34,11 @@ public class ModelSelection : MonoBehaviour
         }
         else if (selectedCharacter == 1)
         {
-            SceneManager.LoadScene("CraneScene");
+            SceneManager.LoadScene("BikeScene");
         }
         else if (selectedCharacter == 2)
         {
-            SceneManager.LoadScene("BikeScene");
+            SceneManager.LoadScene("CraneScene");
         }
     }
 }
