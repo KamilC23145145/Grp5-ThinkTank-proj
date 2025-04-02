@@ -14,9 +14,6 @@ public class TooltipText : MonoBehaviour
     private RectTransform TooltipRectTransform;
     [SerializeField] string InputText;
     [SerializeField] float rotation;
-    [SerializeField] float rotationPos = 360;
-    [SerializeField] int loAngle;
-    [SerializeField] int hiAngle;
     private float offset;
     private CameraSystem PivotRef;
     private void Awake()
@@ -43,22 +40,13 @@ public class TooltipText : MonoBehaviour
 
     private void Update()
     {
+        // This moves the UI box around in a circle.
         TooltipRectTransform.anchoredPosition = new Vector2(
-            Mathf.Sin(PivotRef.mouse_rotation.x / 180 * Mathf.PI + offset) * 200,
-            Mathf.Cos(PivotRef.mouse_rotation.x / 180 * Mathf.PI + Mathf.PI + offset) * 200
+            Mathf.Sin(-PivotRef.mouse_rotation.x / 180 * Mathf.PI) * 200,
+            Mathf.Cos(-PivotRef.mouse_rotation.x / 180 * Mathf.PI) * 200
             );
-        print(((PivotRef.mouse_rotation.x % 360) + rotationPos) % 360 + gameObject.name);
-        //made this dynamic                               made this dynamic
-        //defaullt loAngle = 50, hiAngle = 310
-        if (loAngle > ((PivotRef.mouse_rotation.x % 360) + rotationPos) % 360 || ((PivotRef.mouse_rotation.x % 360) + rotationPos) % 360 > hiAngle) 
-        {
-            TooltipBGImage.color = new Color(0, 0, 0, Mathf.Clamp(Mathf.Cos(PivotRef.mouse_rotation.x / 90 * Mathf.PI), 0, .6f));
-            TooltipTextBox.color = new Color(1, 1, 1, Mathf.Clamp(Mathf.Cos(PivotRef.mouse_rotation.x / 90 * Mathf.PI), 0, .6f));
-        }
-        else
-        {
-            TooltipBGImage.color = new Color(0, 0, 0, 0);
-            TooltipTextBox.color = new Color(1, 1, 1, 0);
-        }
-    }
+        // Change the alpha value of the background and text colour.
+        TooltipBGImage.color = new Color(0, 0, 0, Mathf.Clamp(Mathf.Cos((PivotRef.mouse_rotation.x + offset / Mathf.PI * 180) / 90 * Mathf.PI) + Mathf.Cos((PivotRef.mouse_rotation.x + offset / Mathf.PI * 180) / 180 * Mathf.PI), 0, .6f));
+        TooltipTextBox.color = new Color(1, 1, 1, Mathf.Clamp(Mathf.Cos((PivotRef.mouse_rotation.x + offset / Mathf.PI * 180) / 90 * Mathf.PI) + Mathf.Cos((PivotRef.mouse_rotation.x + offset / Mathf.PI * 180) / 180 * Mathf.PI), 0, .6f));
+    } 
 }
