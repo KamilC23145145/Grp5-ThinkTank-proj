@@ -171,6 +171,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   mouse_rotation: {x: 0, y: 0}
   sens: 0
+  timeout: {fileID: 238928483}
 --- !u!114 &55124788
 MonoBehaviour:
   m_ObjectHideFlags: 0

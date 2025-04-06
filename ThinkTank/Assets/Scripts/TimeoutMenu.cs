@@ -7,18 +7,18 @@ public class TimeoutMenu : MonoBehaviour
 {
     float seconds;
     float limit;
-    // Start is called before the first frame update
+
     void Start()
     {
         limit = 30;
     }
 
-    // Update is called once per frame
+
     void Update()
     {
         seconds += Time.deltaTime;
 
-        print(seconds);
+        //print(seconds);
 
         if (seconds > limit)
         {

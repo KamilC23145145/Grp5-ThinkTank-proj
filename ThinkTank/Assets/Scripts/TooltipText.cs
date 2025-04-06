@@ -47,7 +47,7 @@ public class TooltipText : MonoBehaviour
             Mathf.Sin(PivotRef.mouse_rotation.x / 180 * Mathf.PI + offset) * 200,
             Mathf.Cos(PivotRef.mouse_rotation.x / 180 * Mathf.PI + Mathf.PI + offset) * 200
             );
-        print(((PivotRef.mouse_rotation.x % 360) + rotationPos) % 360 + gameObject.name);
+        //print(((PivotRef.mouse_rotation.x % 360) + rotationPos) % 360 + gameObject.name);
         //made this dynamic                               made this dynamic
         //defaullt loAngle = 50, hiAngle = 310
         if (loAngle > ((PivotRef.mouse_rotation.x % 360) + rotationPos) % 360 || ((PivotRef.mouse_rotation.x % 360) + rotationPos) % 360 > hiAngle) 
