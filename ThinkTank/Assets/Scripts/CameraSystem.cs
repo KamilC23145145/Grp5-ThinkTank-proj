@@ -12,10 +12,14 @@ public class CameraSystem : MonoBehaviour
     private Vector2 move_direction;
     private float mouse_click;
 
+    public TimeoutMenu timeout;
+
     private void Awake()
     {
         sens = 1.0f;
         playerControls = new NewControls();
+
+        timeout = FindObjectOfType<TimeoutMenu>();
     }
     private void OnEnable()
     {
@@ -35,6 +39,8 @@ public class CameraSystem : MonoBehaviour
 
         // if clicking... (as this checks every frame this also is effectively checking for a hold click).
         if (mouse_click == 1.0f) {
+            //if click, reset timeout timer.
+            timeout.resetTimer();
             // get mouse position deltas to rotate around. Clamp the Y direction to not go upside down.
             mouse_rotation.x = mouse_rotation.x + move_direction.x * sens % 360;
             mouse_rotation.y = Mathf.Clamp((mouse_rotation.y + move_direction.y * sens), -90.0f, 90.0f);
