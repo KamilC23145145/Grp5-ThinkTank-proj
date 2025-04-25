@@ -54,14 +54,5 @@ public class CameraSystem : MonoBehaviour
         // scale moves the camera closer to the pivot point based on mouse scroll.
         transform.localScale = new Vector3(transform.localScale.x, transform.localScale.y, 
             Mathf.Clamp(transform.localScale.z - playerControls.ActionMap1.MouseScroll.ReadValue<float>() / 1200.0f, 0.2f, 2.0f)); // subtract the scroll distance to the scale and clamp.
-
-        Ray ray = new Ray(mainCam.transform.position, mainCam.transform.forward);
-
-        if (Physics.Raycast(ray, out hit))
-        {
-            print(hit.collider.gameObject.name + " HIT");
-        }
-
-        //Debug.DrawRay(mainCam.transform.position, mainCam.transform.forward * 100.0f, Color.yellow);
     }
 }

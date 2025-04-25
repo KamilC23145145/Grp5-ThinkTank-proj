@@ -11,12 +11,12 @@ public class TooltipText : MonoBehaviour
     private RectTransform TooltipBGRectTransform;
     private UnityEngine.UI.Image TooltipBGImage;
     private TextMeshProUGUI TooltipTextBox;
+    private RectTransform TooltipTextBoxRectTransform;
     private RectTransform TooltipRectTransform;
+    private UnityEngine.UI.Image TooltipImage;
     [SerializeField] string InputText;
     [SerializeField] float rotation;
     [SerializeField] float rotationPos = 360;
-    [SerializeField] int loAngle;
-    [SerializeField] int hiAngle;
     private float offset;
     private CameraSystem PivotRef;
     private void Awake()
@@ -24,41 +24,33 @@ public class TooltipText : MonoBehaviour
         TooltipBGRectTransform = transform.Find("Background").GetComponent<RectTransform>();
         TooltipBGImage = transform.Find("Background").GetComponent<UnityEngine.UI.Image>();
         TooltipTextBox = transform.Find("Text").GetComponent<TextMeshProUGUI>();
+        TooltipTextBoxRectTransform = transform.Find("Text").GetComponent<RectTransform>();
         TooltipRectTransform = transform.GetComponent<RectTransform>();
         PivotRef = GameObject.Find("Pivot").GetComponent<CameraSystem>();
+        TooltipImage = transform.Find("Image").GetComponent<UnityEngine.UI.Image>();
         offset = rotation * 2 * Mathf.PI;
         SetText();
     }
 
     private void SetText()
     {
+        TooltipRectTransform.sizeDelta = new Vector2(400, 100);
+        TooltipBGRectTransform.sizeDelta = TooltipRectTransform.sizeDelta;
+        TooltipTextBoxRectTransform.sizeDelta = new Vector2(300, 100);        
         TooltipTextBox.SetText(InputText);
         TooltipTextBox.ForceMeshUpdate();
-        TooltipRectTransform.sizeDelta = new Vector2(
-            TooltipTextBox.GetRenderedValues(false).x + 20.0f,
-            TooltipTextBox.GetRenderedValues(false).y + 20.0f
-            );
-        TooltipBGRectTransform.sizeDelta = TooltipRectTransform.sizeDelta;
     }
 
     private void Update()
     {
         TooltipRectTransform.anchoredPosition = new Vector2(
-            Mathf.Sin(PivotRef.mouse_rotation.x / 180 * Mathf.PI + offset) * 200,
+            Mathf.Sin(PivotRef.mouse_rotation.x / 180 * Mathf.PI + offset) * 300,
             Mathf.Cos(PivotRef.mouse_rotation.x / 180 * Mathf.PI + Mathf.PI + offset) * 200
             );
-        //print(((PivotRef.mouse_rotation.x % 360) + rotationPos) % 360 + gameObject.name);
-        //made this dynamic                               made this dynamic
-        //defaullt loAngle = 50, hiAngle = 310
-        if (loAngle > ((PivotRef.mouse_rotation.x % 360) + rotationPos) % 360 || ((PivotRef.mouse_rotation.x % 360) + rotationPos) % 360 > hiAngle) 
-        {
-            TooltipBGImage.color = new Color(0, 0, 0, Mathf.Clamp(Mathf.Cos(PivotRef.mouse_rotation.x / 90 * Mathf.PI), 0, .6f));
-            TooltipTextBox.color = new Color(1, 1, 1, Mathf.Clamp(Mathf.Cos(PivotRef.mouse_rotation.x / 90 * Mathf.PI), 0, .6f));
-        }
-        else
-        {
-            TooltipBGImage.color = new Color(0, 0, 0, 0);
-            TooltipTextBox.color = new Color(1, 1, 1, 0);
-        }
+        float angle = (PivotRef.mouse_rotation.x - rotationPos) * Mathf.Deg2Rad;
+        float alpha = Mathf.Clamp(Mathf.Cos(angle + Mathf.Sin(angle)), 0.0f, 0.8f); // normalize and scale to max alpha
+        TooltipBGImage.color = new Color(0, 0, 0, alpha);
+        TooltipTextBox.color = new Color(1, 1, 1, alpha);
+        TooltipImage.color = TooltipTextBox.color;
     }
 }
