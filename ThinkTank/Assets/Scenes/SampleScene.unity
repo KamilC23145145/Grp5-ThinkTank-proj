@@ -1713,7 +1713,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e14182b4dbedfa0439824739e1415bb1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  InputText: EngineEngineEngineEngineEngineEngineEngineEngineEngineEngineEngineEngineEngineEngineEngineEngineEngine
+  InputText: The wings were oval shaped, to make them thin and lightweight, but strong
+    enough to carry weapons.
   rotation: 0
   rotationPos: 180
 --- !u!1 &1796345457
@@ -1872,7 +1873,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e14182b4dbedfa0439824739e1415bb1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  InputText: RotorsRotorsRotorsRotorsRotorsRotors
+  InputText: Four bladed propellers would make the more advanced models of the Spitfire
+    perform better.
   rotation: 0.33
   rotationPos: 300
 --- !u!1 &1980239284

@@ -913,7 +913,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e14182b4dbedfa0439824739e1415bb1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  InputText: TailTailTailTailTailTail
+  InputText: Hook to lift cargo off canals
   rotation: 0.66
   rotationPos: 60
 --- !u!1 &705507993
@@ -1195,7 +1195,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e14182b4dbedfa0439824739e1415bb1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  InputText: RotorsRotorsRotorsRotorsRotorsRotors
+  InputText: The thick beam helps the crane to stand strong! Some cranes were able
+    to rotate at the base.
   rotation: 0.33
   rotationPos: 300
 --- !u!1 &963194225
@@ -1983,7 +1984,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e14182b4dbedfa0439824739e1415bb1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  InputText: EngineEngineEngineEngineEngineEngineEngineEngineEngineEngineEngineEngineEngineEngineEngineEngineEngine
+  InputText: Large gears to help lift the weight. These could be turned with steam
+    power or human power.
   rotation: 0
   rotationPos: 180
 --- !u!1 &1796345457

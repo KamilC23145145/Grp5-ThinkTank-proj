@@ -174,7 +174,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e14182b4dbedfa0439824739e1415bb1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  InputText: TailTailTailTailTailTail
+  InputText: The first to be called a bicycle! However it was replaced by a design
+    close to what we're used to today due to it being dangerous to ride.
   rotation: 0.66
   rotationPos: 60
 --- !u!1 &34072677
@@ -228,7 +229,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e14182b4dbedfa0439824739e1415bb1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  InputText: EngineEngineEngineEngineEngineEngineEngineEngineEngineEngineEngineEngineEngineEngineEngineEngineEngine
+  InputText: The large 2 meter wheel allows for further and faster travelling!
   rotation: 0
   rotationPos: 180
 --- !u!1 &55124785
@@ -1787,7 +1788,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e14182b4dbedfa0439824739e1415bb1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  InputText: RotorsRotorsRotorsRotorsRotorsRotors
+  InputText: It was hard to ride! You had to be tall and fit to ride properly.
   rotation: 0.33
   rotationPos: 300
 --- !u!1001 &1947344140
