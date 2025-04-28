@@ -2,6 +2,7 @@ using UnityEngine;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine.InputSystem;
+using System;
 
 public class CameraSystem : MonoBehaviour
 {
@@ -23,6 +24,7 @@ public class CameraSystem : MonoBehaviour
 
         timeout = FindObjectOfType<TimeoutMenu>();
         mainCam = FindObjectOfType<Camera>();
+        transform.localScale = new Vector3(transform.localScale.x, transform.localScale.y, transform.localScale.z - 0.3f);
     }
     private void OnEnable()
     {
@@ -54,5 +56,6 @@ public class CameraSystem : MonoBehaviour
         // scale moves the camera closer to the pivot point based on mouse scroll.
         transform.localScale = new Vector3(transform.localScale.x, transform.localScale.y, 
             Mathf.Clamp(transform.localScale.z - playerControls.ActionMap1.MouseScroll.ReadValue<float>() / 1200.0f, 0.2f, 2.0f)); // subtract the scroll distance to the scale and clamp.
+        Debug.Log(playerControls.ActionMap1.MouseScroll.ReadValue<float>());
     }
 }
