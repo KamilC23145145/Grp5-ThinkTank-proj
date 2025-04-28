@@ -712,7 +712,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e14182b4dbedfa0439824739e1415bb1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  InputText: Hook to lift cargo off canals
+  InputText: Hook to lift cargo off canals like coal and building materials.
   rotation: 0.66
   rotationPos: 60
 --- !u!1 &705507993
@@ -994,8 +994,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e14182b4dbedfa0439824739e1415bb1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  InputText: The thick beam helps the crane to stand strong! Some cranes were able
-    to rotate at the base.
+  InputText: The thick beam helps the crane stand strong! Some cranes were able to
+    rotate at the base.
   rotation: 0.33
   rotationPos: 300
 --- !u!1 &963194225
@@ -1562,7 +1562,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: a0e69f143bfece9428c06f7ad2189acf, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 2.45
+      value: 2.3405526
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: a0e69f143bfece9428c06f7ad2189acf, type: 3}
       propertyPath: m_LocalPosition.y
@@ -1570,23 +1570,23 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: a0e69f143bfece9428c06f7ad2189acf, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -0.17
+      value: -0.8930735
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: a0e69f143bfece9428c06f7ad2189acf, type: 3}
       propertyPath: m_LocalRotation.w
-      value: 1
+      value: 0.99331945
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: a0e69f143bfece9428c06f7ad2189acf, type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: a0e69f143bfece9428c06f7ad2189acf, type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0
+      value: 0.11539718
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: a0e69f143bfece9428c06f7ad2189acf, type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: a0e69f143bfece9428c06f7ad2189acf, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -1594,7 +1594,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: a0e69f143bfece9428c06f7ad2189acf, type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
+      value: 13.253
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: a0e69f143bfece9428c06f7ad2189acf, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
@@ -1927,7 +1927,7 @@ PrefabInstance:
     - target: {fileID: -7511558181221131132, guid: 43c5f882e0ea29444b5c34c18160ef78, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: 22d3fa0284e3f86468aff681708328e0, type: 2}
+      objectReference: {fileID: 2100000, guid: 68705f84297060542b3cf2af69784ac1, type: 2}
     - target: {fileID: 919132149155446097, guid: 43c5f882e0ea29444b5c34c18160ef78, type: 3}
       propertyPath: m_Name
       value: sphere-flip-normal
