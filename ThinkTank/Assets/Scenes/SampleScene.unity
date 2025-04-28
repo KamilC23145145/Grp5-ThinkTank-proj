@@ -428,7 +428,7 @@ PrefabInstance:
     - target: {fileID: -7511558181221131132, guid: 43c5f882e0ea29444b5c34c18160ef78, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: 66509fd2c1d8f0943b1faae638651d10, type: 2}
+      objectReference: {fileID: 2100000, guid: 30b7ea50e0f00974bb2cbaf538e32643, type: 2}
     - target: {fileID: 919132149155446097, guid: 43c5f882e0ea29444b5c34c18160ef78, type: 3}
       propertyPath: m_Name
       value: sphere-flip-normal
