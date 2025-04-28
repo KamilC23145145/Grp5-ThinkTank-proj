@@ -2,6 +2,7 @@ using UnityEngine;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine.InputSystem;
+using System;
 
 public class CameraSystem : MonoBehaviour
 {
@@ -23,6 +24,7 @@ public class CameraSystem : MonoBehaviour
 
         timeout = FindObjectOfType<TimeoutMenu>();
         mainCam = FindObjectOfType<Camera>();
+        transform.localScale = new Vector3(transform.localScale.x, transform.localScale.y, transform.localScale.z - 0.45f);
     }
     private void OnEnable()
     {
