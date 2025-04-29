@@ -28,18 +28,18 @@ public class TooltipText : MonoBehaviour
         TooltipTextBoxRectTransform = transform.Find("Text").GetComponent<RectTransform>();
         TooltipRectTransform = transform.GetComponent<RectTransform>();
         PivotRef = GameObject.Find("Pivot").GetComponent<CameraSystem>();
-        TooltipImage = transform.Find("Image").GetComponent<UnityEngine.UI.Image>();
-        TooltipImageRectTransform = transform.Find("Image").GetComponent<RectTransform>();
+        //TooltipImage = transform.Find("Image").GetComponent<UnityEngine.UI.Image>();
+        //TooltipImageRectTransform = transform.Find("Image").GetComponent<RectTransform>();
         offset = rotation * 2 * Mathf.PI;
         SetText();
     }
 
     private void SetText()
     {
-        TooltipRectTransform.sizeDelta = new Vector2(600, 200);
+        TooltipRectTransform.sizeDelta = new Vector2(400, 200);
         TooltipBGRectTransform.sizeDelta = TooltipRectTransform.sizeDelta;
         TooltipTextBoxRectTransform.sizeDelta = new Vector2(400, 200);
-        TooltipImageRectTransform.sizeDelta = new Vector2(200, 200);
+        //TooltipImageRectTransform.sizeDelta = new Vector2(200, 200);
         TooltipTextBox.SetText(InputText);
         TooltipTextBox.ForceMeshUpdate();
     }
@@ -54,6 +54,6 @@ public class TooltipText : MonoBehaviour
         float alpha = Mathf.Clamp(Mathf.Cos(angle + Mathf.Sin(angle)), 0.0f, 0.8f); // normalize and scale to max alpha
         TooltipBGImage.color = new Color(0, 0, 0, alpha);
         TooltipTextBox.color = new Color(1, 1, 1, alpha);
-        TooltipImage.color = TooltipTextBox.color;
+        //TooltipImage.color = TooltipTextBox.color;
     }
 }
