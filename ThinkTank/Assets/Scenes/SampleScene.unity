@@ -614,7 +614,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Sptifire
+  m_text: Spitfire
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 85309c1143a813546bd3defd89727e90, type: 2}
   m_sharedMaterial: {fileID: -7689582510542641132, guid: 85309c1143a813546bd3defd89727e90, type: 2}
