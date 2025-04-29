@@ -226,7 +226,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e14182b4dbedfa0439824739e1415bb1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  InputText: The large 2 meter wheel allows for further and faster travelling!
+  InputText: The large, nearly 2 metre wheel allows for further and faster travelling!
   rotation: 0
   rotationPos: 180
 --- !u!1 &55124785
